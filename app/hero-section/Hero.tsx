@@ -19,15 +19,15 @@ const Hero = () => {
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         <div>
           <Link
-            href="https://cal.com/victorwilliams/30min"
+            href="https://cal.com/rodrigo-garcia-9bkuon/30min?overlayCalendar=true"
             target="_blank"
-            aria-label="BOOK A CALL"
+            aria-label="AGENDAR REUNION"
           >
             <motion.button
               className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block  md:text-[16px] lg:block"
               variants={bodyAnimation}
             >
-              BOOK A CALL
+              AGENDAR REUNION
             </motion.button>
           </Link>
         </div>
@@ -42,11 +42,11 @@ const Hero = () => {
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}
             >
-              GH
+              GitHub
             </motion.p>
           </Link>
           <Link
-            href=""
+            href="https://www.linkedin.com/in/tomasmanazza/"
             target="_blank"
             aria-label="View LinkedIn Profile"
           >
@@ -54,33 +54,11 @@ const Hero = () => {
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}
             >
-              LN
+              LinkedIn
             </motion.p>
           </Link>
-          <Link
-            href="https://twitter.com/victorwill__"
-            target="_blank"
-            aria-label="View Twitter Profile"
-          >
-            <motion.p
-              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-              variants={bodyAnimation}
-            >
-              TW
-            </motion.p>
-          </Link>
-          <Link
-            href="https://contra.com/victorwilliams"
-            target="_blank"
-            aria-label="View Contra Profile"
-          >
-            <motion.p
-              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-              variants={bodyAnimation}
-            >
-              CO
-            </motion.p>
-          </Link>
+        
+         
         </div>
       </div>
 
@@ -119,16 +97,16 @@ const Hero = () => {
           variants={bodyAnimation}
         >
           <p className="z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left">
-            Frontend Engineer and Web Designer, prev at{" "}
+            Programador Full Stack, con una especialización en Backend. CEO de {" "}
             <Link
-              href="https://www.korahq.com/"
+              href="https://www.instagram.com/empty_development/#"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
               aria-label="Kora Website"
             >
-              Kora,
+              EmptyDevelopment,
             </Link>{" "}
-            currently available for work.
+            StartUp de Sistemas de Gestión Privados
           </p>
         </motion.div>
 
@@ -137,8 +115,7 @@ const Hero = () => {
           variants={bodyAnimation}
         >
           <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
-            Focused on interfaces and experiences, working remotely from Lagos,
-            Nigeria.
+            Estudiante de Ing.Informatica en la Facultad de Ingeniería y Ciencias Hidricas.
           </p>
         </motion.div>
       </div>

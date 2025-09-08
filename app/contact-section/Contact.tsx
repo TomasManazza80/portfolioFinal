@@ -21,7 +21,7 @@ const Contact = () => {
           className={`flex flex-col items-start justify-center ${monaSans.className} relative w-full sm:items-center lg:max-w-[1440px] `}
         >
           <AnimatedWords2
-            title={"Let's Talk"}
+            title={"Hablemos"}
             style={
               "flex max-w-[500px] flex-col items-start text-left text-[150px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[170px] md:text-[200px] lg:text-center lg:text-[270px] xl:text-[390px]"
             }
@@ -29,7 +29,7 @@ const Contact = () => {
           <Image
             src={heartIcon}
             alt="Heart Icon"
-            className="heartbeat md:-bottom-18 absolute -bottom-5 left-64 w-[120px] sm:-bottom-14 sm:left-[40%] md:left-[40%] md:w-[150px] lg:-bottom-16 lg:left-[42%] lg:w-[230px]"
+            className="heartbeat md:-bottom-18 absolute -bottom-5 left-64 w-[120px] sm:-bottom-14 sm:left-[40%] md:left-[40%] md:w-[150px] lg:-bottom-16 lg:left-[42%] lg:w-[230px] mb-[40px]"
           />
         </div>
 
@@ -77,12 +77,12 @@ const Contact = () => {
 
           <div className="flex gap-10 text-[16px] font-bold text-[#e4ded7]  sm:gap-14 sm:text-[24px] md:gap-10 md:text-[16px] lg:gap-20 lg:text-[28px]">
             <Link
-              href="https://github.com/victorcodess"
+              href="https://github.com/TomasManazza80"
               target="_blank"
               aria-label="View GitHub Profile"
             >
               <AnimatedTitle
-                text={"GH"}
+                text={"GitHub"}
                 className={
                   "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
                 }
@@ -96,7 +96,7 @@ const Contact = () => {
               aria-label="View LinkedIn Profile"
             >
               <AnimatedTitle
-                text={"LN"}
+                text={"LinkedIn"}
                 className={
                   "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
                 }
@@ -105,12 +105,12 @@ const Contact = () => {
               />
             </Link>
             <Link
-              href="https://twitter.com/victorwill__"
+              href="https://wa.me/+543425937358"
               target="_blank"
               aria-label="View Twitter Profile"
             >
               <AnimatedTitle
-                text={"TW"}
+                text={"WhatsApp"}
                 className={
                   "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
                 }
@@ -119,12 +119,12 @@ const Contact = () => {
               />
             </Link>
             <Link
-              href="https://www.instagram.com/victorwill__/"
+              href="https://www.instagram.com/empty_development/#"
               target="_blank"
               aria-label="View Instagram Profile"
             >
               <AnimatedTitle
-                text={"IG"}
+                text={"Instagram"}
                 className={
                   "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
                 }
@@ -132,20 +132,8 @@ const Contact = () => {
                 charSpace={"mr-[0.01em]"}
               />
             </Link>
-            <Link
-              href="https://blog.victorwilliams.me/"
-              target="_blank"
-              aria-label="View Hashnode Profile"
-            >
-              <AnimatedTitle
-                text={"HN"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
+          
+           
           </div>
         </div>
       </div>
