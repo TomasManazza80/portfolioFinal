@@ -9,14 +9,14 @@ import profile from "../../public/profile.png";
 const Hero = () => {
   return (
     <motion.section
-      className="relative z-10 flex h-[85vh] w-full items-stretch justify-center bg-[url('.//../public/hero.jpg')] bg-cover  bg-center py-0 sm:h-[90vh]  md:h-[100vh] 3xl:h-[85vh]"
+      className="relative z-10 flex min-h-[85vh] w-full flex-col items-stretch justify-center bg-[url('.//../public/hero.jpg')] bg-cover bg-center py-0 sm:min-h-[90vh] md:min-h-[100vh] 3xl:min-h-[85vh]"
       id="home"
       initial="initial"
       animate="animate"
     >
       <motion.div className="absolute left-0 top-0 right-0 bottom-0 h-full w-full bg-[#0E1016] mix-blend-color"></motion.div>
 
-      <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
+      <div className="absolute top-10 flex w-full justify-between px-5 sm:left-1/2 sm:w-[90%] sm:-translate-x-1/2 sm:px-0 lg:max-w-[1440px]">
         <div>
           <Link
             href="https://cal.com/rodrigo-garcia-9bkuon/30min?overlayCalendar=true"
@@ -24,7 +24,7 @@ const Hero = () => {
             aria-label="AGENDAR REUNION"
           >
             <motion.button
-              className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block  md:text-[16px] lg:block"
+              className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] transition-colors hover:bg-[#e4ded7] hover:text-[#0E1016] sm:block md:text-[16px] lg:block"
               variants={bodyAnimation}
             >
               AGENDAR REUNION
@@ -57,12 +57,10 @@ const Hero = () => {
               LinkedIn
             </motion.p>
           </Link>
-        
-         
         </div>
       </div>
 
-      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40 ">
+      <div className="z-10 -mt-36 flex flex-1 flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40">
         <div
           className={`relative flex flex-col items-center justify-center ${monaSans.className}`}
         >
@@ -74,30 +72,25 @@ const Hero = () => {
             className="absolute bottom-[-110px] mx-auto sm:bottom-[-100px] md:bottom-[-130px] lg:bottom-[-150px]"
             variants={imageAnimation}
           >
-           
-        <Image
-  src={profile}
-  priority
-  alt="Victor's headshot"
-  data-blobity-tooltip="Giga Chad"
-  data-blobity-invert="false"
-  className="w-[30px] rounded-[16px] grayscale hover:grayscale-0 md:w-[100px] md:rounded-[32px] lg:w-[180px] mb-[-20px]"
-/>
+            <Image
+              src={profile}
+              priority
+              alt="Victor's headshot"
+              data-blobity-tooltip="Giga Chad"
+              data-blobity-invert="false"
+              className="w-[120px] rounded-[16px] grayscale hover:grayscale-0 md:w-[150px] md:rounded-[32px] lg:w-[180px]"
+            />
           </motion.div>
         </div>
       </div>
 
-      <div
-        className="absolute bottom-10 flex items-center 
-      justify-center
-      md:bottom-10 lg:w-[90%] lg:max-w-[1440px] lg:justify-between"
-      >
+      <div className="absolute bottom-10 left-1/2 w-full max-w-[90%] -translate-x-1/2 transform items-center justify-center md:bottom-10 lg:flex lg:max-w-[1440px] lg:justify-between">
         <motion.div
-          className="  max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
+          className="max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
           variants={bodyAnimation}
         >
           <p className="z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left">
-            Programador Full Stack, con una especialización en Backend. CEO de {" "}
+            Programador Full Stack, con una especialización en Backend. CEO de{" "}
             <Link
               href="https://www.instagram.com/empty_development/#"
               target="_blank"
@@ -111,7 +104,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="  hidden max-w-[500px] lg:block lg:max-w-[420px]"
+          className="mt-4 hidden max-w-[500px] lg:mt-0 lg:block lg:max-w-[420px]"
           variants={bodyAnimation}
         >
           <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">

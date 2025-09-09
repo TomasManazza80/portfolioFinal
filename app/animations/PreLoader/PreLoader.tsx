@@ -1,7 +1,7 @@
-"use cleint";
+"use client";
 import { useEffect } from "react";
 import { preLoaderAnim } from "./loader";
-import "./preloader.css";
+import "./PreLoader.css";
 
 const PreLoader = () => {
   useEffect(() => {
@@ -9,12 +9,20 @@ const PreLoader = () => {
   }, []);
 
   return (
-    <div className="preloader gap-[5px] overflow-hidden text-[14px] sm:gap-[10px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
-      <div className="texts-container w-500 flex h-60 items-center justify-center gap-[5px] overflow-hidden text-[14px] font-extrabold text-[#e4ded7] opacity-0 sm:gap-[10px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
-        <span>TOMÁS</span>
-        <span>MANAZZA</span>
-        <span>DEVELOPER</span>
-        <div className="sub hidden"></div>
+    <div className="preloader">
+      <div className="texts-container">
+        <div className="preloader-name-line">
+          <span className="preloader-text">TOMÁS</span>
+          <span className="preloader-text">MANAZZA</span>
+          <span className="preloader-text">|</span>
+          <span className="preloader-text">DEVELOPER</span>
+        </div>
+        
+        <div className="preloader-ceo-line">
+          <span className="preloader-subtext">CEO</span>
+          <span className="preloader-subtext">of</span>
+          <span className="preloader-subtext">EMPTY</span>
+        </div>
       </div>
     </div>
   );
