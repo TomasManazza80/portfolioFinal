@@ -37,13 +37,13 @@ const Contact = () => {
           <div className=" flex w-[350px] max-w-[90%] flex-col items-end text-right text-[14px] font-semibold uppercase text-[#e4ded7] sm:w-[350px] sm:text-[14px] md:w-[310px] md:items-start md:text-left md:text-[16px] lg:w-[420px] lg:text-[16px]">
             <AnimatedBody
               text={
-                "Got a question, proposal, project, or want to work together on something?"
+                "¿Tienes alguna pregunta, propuesta, proyecto o quieres trabajar junto con nosotros en algo?"
               }
               className={
                 "-mb-1 inline-block overflow-hidden pt-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
               }
             />
-            <div className="bor der mt-5 flex w-[298px] items-center gap-1 md:w-[335px] md:gap-2.5">
+            {/* <div className="bor der mt-5 flex w-[298px] items-center gap-1 md:w-[335px] md:gap-2.5">
               <Link
                 href="mailto:victor.will.chuk@gmail.com?subject=Lets%20work%20together!&amp;body=Hello%2C%20I%20think%20we%20need%20you%20to%20work%20on%2Fcollaborate%20this%20particular%20product...%20Reach%20out%20as%20soon%20as%20you%20can."
                 target="_blank"
@@ -72,7 +72,7 @@ const Contact = () => {
                   className={"w-[110px] md:w-[120px]"}
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex gap-10 text-[16px] font-bold text-[#e4ded7]  sm:gap-14 sm:text-[24px] md:gap-10 md:text-[16px] lg:gap-20 lg:text-[28px]">
