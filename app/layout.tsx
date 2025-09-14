@@ -13,7 +13,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Tomas Manazza - Full Stack Dev",
   description:
-    "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
+    "Full Stack Developer y CEO de Empty_Development. Apasionado por crear soluciones digitales innovadoras y eficientes.",
   generator: "Next.js",
   applicationName: "Tomas Manazza",
   keywords: [
@@ -39,9 +39,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tomas Manazza - Full Stack Dev",
     description:
-      "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
-    url: "https://www.victorwilliams.me/",
-    siteName: "www.victorwilliams.me",
+      "Full Stack Developer y CEO de Empty_Development. Apasionado por crear soluciones digitales innovadoras y eficientes.",
+    siteName: "www.tomasmanazza.com",
     images: [
       {
         url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
@@ -57,8 +56,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tomas Manazza - Full Stack Dev",
     description:
-      "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
-    creator: "victorwill__",
+      "Full Stack Developer y CEO de Empty_Development. Apasionado por crear soluciones digitales innovadoras y eficientes.",
+    creator: "tomas manazza",
     creatorId: "1243720976552144897",
     images: [
       "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
