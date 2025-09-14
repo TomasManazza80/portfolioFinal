@@ -17,23 +17,11 @@ export const metadata: Metadata = {
   generator: "Next.js",
   applicationName: "Tomas Manazza",
   keywords: [
-    "freelance",
+    "tomas manazza",
+    "Tomas Manazza",
+    "full stack developer",
     "developer",
-    "freelance developer",
-    "frontend",
-    "react",
-    "frontend developer",
-    "frontend engineer",
-    "creative",
-    "creative developer",
-    "creative engineer",
-    "tech",
-    "nigeria",
-    "software",
-    "software developer",
-    "portfolio",
-    "frontend developer portfolio",
-    "creative developer portfolio",
+    "full stack",
   ],
   colorScheme: "dark",
   openGraph: {
@@ -89,6 +77,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+     <head>
+        <title>Tomas Manazza - Full Stack Developer</title>
+      </head> 
       <body
         className={`${syne.className} scroll-smooth scrollbar-thin scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
       >
