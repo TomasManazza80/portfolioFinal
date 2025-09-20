@@ -64,9 +64,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "Tviee0mVRz9tlPLOv5_waP-rNS3m0y4K2mbqDHSqPJE",
-  },
+  // verification: {
+  //   google: "Tviee0mVRz9tlPLOv5_waP-rNS3m0y4K2mbqDHSqPJE",
+  // },
   category: "technology",
 };
 
