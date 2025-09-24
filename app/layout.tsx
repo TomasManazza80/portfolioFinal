@@ -11,7 +11,7 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Tomas Manazza - Full Stack Dev",
+  title: "Tomas Manazza - Fullstack Developer",
   description:
     "Full Stack Developer y CEO de Empty_Development. Apasionado por crear soluciones digitales innovadoras y eficientes.",
   generator: "Next.js",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
   ],
   colorScheme: "dark",
   openGraph: {
-    title: "Tomas Manazza - Full Stack Dev",
+    title: "Tomas Manazza - Fullstack Developer",
     description:
       "Full Stack Developer y CEO de Empty_Development. Apasionado por crear soluciones digitales innovadoras y eficientes.",
     siteName: "www.tomasmanazza.com",
     images: [
       {
-        url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
+        url: "https://i.postimg.cc/SKD5TpwV/Whats-App-Image-2025-09-24-at-7-54-20-PM.jpg",
         width: 1200,
         height: 630,
         alt: "Tomas Manazza - Full Stack Developer",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     creator: "tomas manazza",
     creatorId: "1243720976552144897",
     images: [
-      "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
+      "https://i.postimg.cc/SKD5TpwV/Whats-App-Image-2025-09-24-at-7-54-20-PM.jpg",
     ],
   },
   robots: {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     },
   },
   // verification: {
-  //   google: "Tviee0mVRz9tlPLOv5_waP-rNS3m0y4K2mbqDHSqPJE",
+  //   google: "",
   // },
   category: "technology",
 };
@@ -77,9 +77,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-     <head>
-        <title>Tomas Manazza - Full Stack Developer</title>
-      </head> 
+      <head>
+        <title>Tomas Manazza - Fullstack Developer</title>
+      </head>
       <body
         className={`${syne.className} scroll-smooth scrollbar-thin scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
       >
