@@ -1,3 +1,4 @@
+// Importaciones necesarias
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -7,6 +8,31 @@ import Image from "next/image";
 import AnimatedTitle from "../animations/AnimatedTitle";
 import AnimatedBody from "../animations/AnimatedBody";
 import { motion } from "framer-motion";
+
+const cardVariants = {
+  initial: { opacity: 0, y: 50 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeInOut",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const textVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 const ProjectCard = ({
   id,
@@ -18,123 +44,135 @@ const ProjectCard = ({
   image,
   available,
 }: ProjectProps) => {
+  const isEven = id % 2 === 0;
+
   return (
     <motion.div
-      style={
-        {
-          backgroundColor: "#212531",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-          position: "relative",
-        } as React.CSSProperties
-      }
-      className={`relative z-10 h-[550px]  w-full items-stretch justify-center overflow-hidden rounded-3xl bg-center py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
+      variants={cardVariants}
       initial="initial"
       animate="animate"
+      className={`group relative z-10 flex h-[650px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl bg-[#11131b] py-8 shadow-2xl md:h-[550px] lg:h-[500px] lg:flex-row lg:py-0 ${
+        isEven ? "lg:flex-row-reverse" : ""
+      }`}
     >
-      <Image
-        src={image}
-        alt={name}
-        className={`absolute -bottom-2 w-[70%] sm:w-[85%] md:w-[60%] lg:max-w-[55%] ${
-          id % 2 === 0 ? "right-0" : "left-0"
+      {/* Contenedor de la información (texto y botones) */}
+      <div
+        className={`relative z-30 flex h-full w-full flex-col items-center p-6 text-white lg:w-1/2 lg:items-start lg:p-14 ${
+          isEven ? "lg:text-right" : ""
         }`}
-      />
-      <div
-        className={`absolute top-0 text-[#0E1016] ${
-          id % 2 === 0 ? "left-0 ml-8 lg:ml-14" : "right-0 mr-8 lg:mr-14"
-        } mt-6 flex  items-center justify-center gap-4 lg:mt-10`}
       >
-        {available ? (
-          <>
-            <Link
-              href={github}
-              target="_blank"
-              className="rounded-full"
-              aria-label="Open GitHub Repository"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                data-blobity
-                data-blobity-radius="38"
-                data-blobity-offset-x="4"
-                data-blobity-offset-y="4"
-                data-blobity-magnetic="true"
-              />
-            </Link>
-            <Link href={demo} target="_blank" aria-label="Open Live Demo">
-              <FontAwesomeIcon
-                icon={faLink}
-                className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                data-blobity
-                data-blobity-radius="38"
-                data-blobity-offset-x="4"
-                data-blobity-offset-y="4"
-                data-blobity-magnetic="trues"
-              />
-            </Link>
-          </>
-        ) : (
-          <div className=" flex items-center justify-center gap-4">
-            <Link
-              href={github}
-              target="_blank"
-              className="mt-1 rounded-full"
-              aria-label="Open GitHub Repository"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className=" w-[20px]  rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                data-blobity
-                data-blobity-radius="38"
-                data-blobity-offset-x="4"
-                data-blobity-offset-y="4"
-                data-blobity-magnetic="true"
-              />
-            </Link>
-            <div className=" rounded-xl bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4">
-              <h3 className="text-[16px] md:text-[18px] lg:text-[20px] ">
-                Coming soon
-              </h3>
+        <div
+          className={`mb-6 flex items-center gap-4 ${
+            isEven ? "lg:self-end" : "lg:self-start"
+          }`}
+        >
+          {available ? (
+            <>
+              <Link
+                href={github}
+                target="_blank"
+                className="rounded-full bg-white p-5 text-gray-900 shadow-md transition-all duration-300 hover:scale-110 hover:bg-gray-200"
+                aria-label="Open GitHub Repository"
+              >
+                <FontAwesomeIcon icon={faGithub} className="w-[20px] text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]" />
+              </Link>
+              <Link
+                href={demo}
+                target="_blank"
+                className="rounded-full bg-white p-5 text-gray-900 shadow-md transition-all duration-300 hover:scale-110 hover:bg-gray-200"
+                aria-label="Open Live Demo"
+              >
+                <FontAwesomeIcon icon={faLink} className="w-[20px] text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]" />
+              </Link>
+            </>
+          ) : (
+            <div className="flex items-center gap-4">
+              <Link
+                href={github}
+                target="_blank"
+                className="rounded-full bg-white p-5 text-gray-900 shadow-md transition-all duration-300 hover:scale-110 hover:bg-gray-200"
+                aria-label="Open GitHub Repository"
+              >
+                <FontAwesomeIcon icon={faGithub} className="w-[20px] text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]" />
+              </Link>
+              <div className="rounded-xl bg-white px-4 py-2 text-gray-900 shadow-md md:px-5 md:py-3 lg:px-6 lg:py-4">
+                <h3 className="text-[16px] font-bold md:text-[18px] lg:text-[20px]">
+                  Próximamente
+                </h3>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-      <div
-        className={`absolute text-white  ${
-          !(id % 2 === 0)
-            ? "right-0 top-32 mr-0 ml-10 md:right-0 md:ml-0 lg:right-0 lg:top-60  lg:mr-4"
-            : "left-10 top-32 ml-0 md:mr-12 lg:top-52 lg:ml-4"
-        } mb-10  md:mb-16 lg:mb-14 `}
-      >
-        <AnimatedTitle
-          text={name}
-          className={
-            "max-w-[90%] text-[40px] leading-none text-white md:text-[44px] md:leading-none lg:max-w-[450px] lg:text-[48px] lg:leading-none"
-          }
-          wordSpace={"mr-[0.25em]"}
-          charSpace={"-mr-[0.01em]"}
-        />
-        <AnimatedBody
-          text={description}
-          className={
-            "mt-4 w-[90%] max-w-[457px] text-[16px] font-semibold text-[#95979D] "
-          }
-        />
-        <div className="mt-9 flex gap-4">
-          {technologies.map((tech, id) => (
-            <AnimatedTitle
-              text={tech}
-              wordSpace={"mr-[0.25em]"}
-              charSpace={"mr-[0.01em]"}
-              key={id}
-              className={
-                "text-[14px] font-bold uppercase md:text-[16px] lg:text-[18px] "
-              }
-            />
+          )}
+        </div>
+        <motion.div variants={textVariants}>
+          <AnimatedTitle
+            text={name}
+            className={`text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl ${
+              isEven ? "lg:text-right" : ""
+            }`}
+            wordSpace={"mr-[0.25em]"}
+            charSpace={"-mr-[0.01em]"}
+          />
+        </motion.div>
+        <motion.div variants={textVariants}>
+          <AnimatedBody
+            text={description}
+            className={`mt-4 text-lg text-gray-300 md:w-[90%] lg:w-full ${
+              isEven ? "lg:text-right" : ""
+            }`}
+          />
+        </motion.div>
+        <div
+          className={`mt-9 flex flex-wrap gap-x-4 gap-y-2 ${
+            isEven ? "lg:self-end" : "lg:self-start"
+          }`}
+        >
+          {technologies.map((tech, idx) => (
+            <motion.div variants={textVariants} key={idx}>
+              <AnimatedTitle
+                text={tech}
+                wordSpace={"mr-[0.25em]"}
+                charSpace={"mr-[0.01em]"}
+                className={"text-base font-bold uppercase text-gray-400 md:text-lg lg:text-xl"}
+              />
+            </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* Contenedor de la imagen */}
+      <div className="relative flex h-full w-full items-center justify-center lg:w-1/2">
+        {/* Enlace que envuelve la capa de desenfoque y la imagen */}
+        {available ? (
+          <Link href={demo} target="_blank" className="relative h-full w-full">
+            <div
+              className={`absolute inset-0 z-20 hidden backdrop-blur-md transition-all duration-500 group-hover:backdrop-blur-none lg:block ${
+                isEven ? "left-0" : "right-0"
+              }`}
+            ></div>
+            <Image
+              src={image}
+              alt={name}
+              width={700}
+              height={700}
+              className="relative z-10 h-full w-full object-cover transition-all duration-500"
+            />
+          </Link>
+        ) : (
+          <>
+            <div
+              className={`absolute inset-0 z-20 hidden backdrop-blur-md transition-all duration-500 group-hover:backdrop-blur-none lg:block ${
+                isEven ? "left-0" : "right-0"
+              }`}
+            ></div>
+            <Image
+              src={image}
+              alt={name}
+              width={700}
+              height={700}
+              className="relative z-10 h-full w-full object-cover transition-all duration-500"
+            />
+          </>
+        )}
       </div>
     </motion.div>
   );

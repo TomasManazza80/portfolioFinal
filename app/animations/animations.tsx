@@ -8,7 +8,8 @@ export const riseWithFade = {
     opacity: 1,
     transition: {
       ease: [0.65, 0, 0.35, 1],
-      duration: 0.7,
+      // Se redujo a lo mínimo para un "pop-in" casi instantáneo
+      duration: 0.15,
     },
   },
 };
@@ -17,15 +18,16 @@ export const imageAnimation = {
   initial: {
     y: 50,
     opacity: 0,
-    scale: 0.8,
+    scale: 0.4,
   },
   animate: {
     opacity: 1,
     scale: 1,
     y: `0em`,
     transition: {
-      delay: 6.5,
-      duration: 1,
+      // Retardo y duración casi nulos para la imagen
+      delay: 0.15,
+      duration: 0.2,
       ease: [0.2, 0.65, 0.3, 0.9],
     },
   },
@@ -34,8 +36,9 @@ export const imageAnimation = {
 export const staggerChildren = {
   animate: {
     transition: {
-      delayChildren: 0.4,
-      staggerChildren: 0.1,
+      // Retardo entre hijos casi imperceptible
+      delayChildren: 0.05,
+      staggerChildren: 0.01,
     },
   },
 };
@@ -49,9 +52,10 @@ export const wordAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1,
+      // Retardo y duración mínimos
+      delay: 0.1,
       ease: [0.2, 0.65, 0.3, 0.9],
-      duration: 1,
+      duration: 0.15,
     },
   },
 };
@@ -65,9 +69,9 @@ export const wordAnimation2 = {
     opacity: 1,
     y: 0,
     transition: {
-      // delay: 1,
+      // Duración ultra-corta
       ease: [0.2, 0.65, 0.3, 0.9],
-      duration: 1,
+      duration: 0.15,
     },
   },
 };
@@ -81,8 +85,9 @@ export const bodyAnimation = {
     opacity: 1,
     y: `0em`,
     transition: {
-      delay: 5.5,
-      duration: 1,
+      // Retardo y duración casi nulos
+      delay: 0.1,
+      duration: 0.2,
       ease: [0.2, 0.65, 0.3, 0.9],
     },
   },
